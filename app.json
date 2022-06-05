@@ -1,0 +1,22 @@
+{
+    "Name": "Spotube-API",
+    "Author": "DiyRex",
+    "Repository": "https://github.com/DiyRex/Spotube-API",
+    "Keywords": [
+      "spotify-api",
+      "spotify-downloader",
+      "spotify2yt"
+    ],
+    "env": {
+        "APP_NAME": {
+          "description": "The App Name you want to use !!"
+            }
+    },
+    "buildpacks": [
+      {
+        "url": "https://github.com/heroku/heroku-buildpack-python.git",
+        "url": "https://github.com/getlantern/heroku-buildpack-yt-dlp.git",
+        "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+      }
+    ]
+  }
