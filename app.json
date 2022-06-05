@@ -2,6 +2,7 @@
     "Name": "Spotube-API",
     "Author": "DiyRex",
     "Repository": "https://github.com/DiyRex/Spotube-API",
+    "logo": "https://github.com/DiyRex/Spotube-API/blob/main/Design/spotube1.png",
     "Keywords": [
       "spotify-api",
       "spotify-downloader",
