@@ -1,10 +1,9 @@
-#<p align="center"># Spotube-API</p>
+<h1 align="center">Spotube-API</h1>
 
 <p align="center">
   <img src="https://github.com/DiyRex/Spotube-API/blob/main/Design/Untitled-1.png?raw=true" width="350" title="hover text">
 </p>
-<p align="center">Spotify Downloader ( Download from Youtube by scraping data from Spotify )</p>
-<br>
+<h3 align="center">Spotify Downloader ( Download audio from Youtube by scraping data from Spotify )</h3>
 <br>
 <br>
 <p align="center">
@@ -12,3 +11,5 @@
     <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
 </a>
 </p>
+<br>
+<h4 align="right" font=>Owned by DiyRex :)</h4>
