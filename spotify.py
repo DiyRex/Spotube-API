@@ -8,7 +8,7 @@ import query
 
 
 
-def spotify_dl(url):
+def spotify_dl(url,ytdl_url):
     response = requests.get(url)
 
     soup = BeautifulSoup(response.text, 'html.parser')
@@ -30,6 +30,6 @@ def spotify_dl(url):
 
     video_url = query.search(song_title+" "+song_artist)
 
-    res_data = {'Song':song_title,'Author':song_artist,'year':year,'image':data_img,'video_url':video_url}
+    res_data = {'Song':song_title,'Author':song_artist,'year':year,'image':data_img,'video_url':video_url,'Download_url':ytdl_url}
 
     return res_data
