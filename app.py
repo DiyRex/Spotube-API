@@ -31,10 +31,12 @@ def runner():
   info =  {"Stats":"Server Running !!!","Owned by":"DiyRex :)","Usage":[{"Get Data from Spotify":host_url+"/spotube?url=[url]"},{"Download Audio from YT": host_url+"/audio?url=[url]"}]}
   return info
 
+# http://127.0.0.1:7000/spotube?url=https://open.spotify.com/track/0er7D7HVZj6p28arlAlImW?si=e3f68abd56a54884
+
 @app.route('/spotube',methods=['GET'])
 def spotube():
     audio = request.args.get('url')
-    json_data = spotify.spotify_dl(url=audio,ytdl_url=host_url+"/audio?url="+audio)
+    json_data = spotify.spotify_dl(url=audio,ytdl_url=host_url+"/audio?url={0}")
     return json_data
 
 @app.route("/audio", methods=['GET', 'POST'])
@@ -45,6 +47,7 @@ def download_audio():
     file_bytes = b""
     with open(audio[1], "rb") as f:
         file_bytes = f.read()
+    #return  send_file(BytesIO(file_bytes), attachment_filename=audio, as_attachment=True), {"Message":"Downloading"}
     return send_file(
          audio[1], 
          mimetype="audio/mpeg", 
