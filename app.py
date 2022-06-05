@@ -36,7 +36,7 @@ def runner():
 @app.route('/spotube',methods=['GET'])
 def spotube():
     audio = request.args.get('url')
-    json_data = spotify.spotify_dl(url=audio)
+    json_data = spotify.spotify_dl(url=audio,ytdl_url=host_url+"/audio?url=[url]")
     return json_data
 
 @app.route("/audio", methods=['GET', 'POST'])
